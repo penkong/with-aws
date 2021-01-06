@@ -202,19 +202,166 @@ you : users groups roles policy , mfa , rotate keys , analyze
 IAM DONE !!!!
 
 ---------------------------------------------------------------------
+IAM ---> EC2 (iaas)
+
+EC2 - elstic compute cloud 
+
+
+
+control billing :
+
+top right conrenr
+click user 
+my billing dashboard
+need permissionss
+
+login root
+my account
+search for 
+IAM user and role access
+edit 
+give access.
+refresh .
+
+now activated.
+
+
+
+SET Budgets :
+on right 
+go to 
+Budgets
+create a budget
+cost budget
+name 
+monthly 
+recurring
+fixed amount
+10 dollars
+click config
+actual cost 
+alert threshold 
+for example : 80 percent
+add email
+add more alert if you want 
+finally create .
+
+
+
+to check what cause price for you :
+Billing 
+bills 
+select priod .
 
 
 
 
+EC2 Basics :
+
+create first website on aws .
+check pdf for what ec2 offer.
+ec2
+ebs = store
+elb = load across machine
+asg = scaling
+
+EC2 is very important .
+
+
+choose os 
+how much resources ...
+how much hardware (ec2 instance store)
+how much network( ebs & efs )
+network card
+firewall rules
+
+there are bootstrap script fot these.
+
+
+ec2 innstace types 
+t2.micro == 750 hrs per month free
+ 
+(((((((((((((( BE < DO < HAVE < SHARE ))))))))))))))
+
+launching ec2 instance :
+
+with ec2 user data 
+console
+choose region 
+type ec2
+now 
+
+ec2 console :
+on right 
+instances 
+launch instance
+must choose ami (amzon machine image)
+we here use quick start
+amazon linux2
+next 
+choose type of instnace 
+click 
+configure instance details section 
+go down 
+advanced details 
+user data (script will ec2 run)
+allow us to use webserver 
+ec2-user-data.sh (with apache or go with nginx)
+copy paste 
+click
+add storage 
+add tags (like user tage)
+name : my first instance
+Departemnt : finance 
+click 
+config security group
+it say what we allow in and out
+create new security group
+add role 
+http 
+review 
+launch
+modal open 
+create a new key pair 
+it give us a pem file (public key)
+launch
+view 
+
+
+after loading 
+
+
+
+in description 
+you will see public ip and dns 
+
+
+
+right click on instance 
+instance state 
+stop
 
 
 
 
+firewall
+security groups classic ports :
+can reference by IP or security group 
+only contain allow rules
+
+create security group around ec2 instance
+it will have rules 
+inbound / outbound traffic 
+ports , ip range
 
 
 
-
-
+define your ip with port 22 for ssh for example
+port 21 = ftp
+22 = sftp , ssh for linux 
+80 = http
+443 = https
+3389 = remote desktop protocol for windows
 
 
 
