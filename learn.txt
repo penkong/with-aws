@@ -1,0 +1,5 @@
+which aws service would simplify the migration of a db to aws.???
+aws database migration service
+
+create aws acc ,
+ 
