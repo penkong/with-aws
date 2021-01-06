@@ -3,3 +3,227 @@ aws database migration service
 
 create aws acc ,
  
+
+network: cables ,routers , servers
+
+routers : device that forward packets , they know where send data
+
+switch : takes packet and send it to correct server .
+
+pc >> routers >> switch >> receiver
+
+cloud computing : on demand delivery of compute power/ resources
+
+hybrid cloud : some on cloud , some on ours
+
+iaas : provide building blocks for cloud it , networking , computers , datastorage
+
+
+paas : remove need for your organization to manage the infra
+       focus on deploy and managment.
+
+
+Saas : compledte proudct.
+
+
+after sign in 
+can change your Region 
+
+
+first service :
+
+IAM
+
+
+check avai service : on region table
+
+
+
+in IAM , we create user and assign them to groups .
+
+create user ,
+define password,
+set permissions
+define group 
+admins 
+tick that 
+next tags
+tags : are way to mark a user and add them attributes. 
+for example >> Departemnt : Enginnering
+review 
+create user . 
+---> now 
+it give us : csv , link to login (changeable) and current state 
+on dashboard 
+on top 
+IAM users sing-in link 
+customize 
+add name : like priotix (name of root user )
+account alias
+
+
+for sign in :
+paste alias
+paste username
+password
+
+
+if on navbar you see @ means you are IAM user 
+otherwise you are root user .
+
+
+
+now you can change policy from root.
+
+
+
+on left list of all policies ,
+
+
+now if click on one policy
+it show list of permissions that currently related to that specific policy
+json 
+{
+  effect : allow
+  action : valid service or services 
+  resource :
+}
+
+
+also can create your own policy 
+
+policy
+create policy
+choose service 
+choose policy
+resources
+condition
+
+
+defence mechnism for IAM 
+2 way 
+password policy
+MFA = multi factor authentication
+MFA options 
+virtual : google, multi (Authy)
+U2F : physical , usb
+hardware key fob MFA device (Gemalto)
+hardware key fob AWS GovCloud (sure pass id)
+ 
+
+
+Access way 
+consolo 
+cli 
+sdk 
+
+need to generate Access keys 
+
+users do for themselves
+
+Access key Id 
+Access key secret
+
+
+
+install aws cli 
+
+
+aws --version
+
+
+now create Access key :
+go to users 
+@user not root
+security credentials tab
+create Access key 
+
+
+cli :
+aws configure 
+ask id 
+ask key 
+region name : enter
+enter
+
+aws iam list-users
+
+
+IAM roles :
+some services for their actions
+on our behalf , on our account
+they are like users
+need permissions
+need to assign permissions to services
+we use IAM role.
+ec2 == virtual server
+service + IAM role == create entity
+if ec2 want access data 
+if permission correct
+
+common roles 
+check pdf.
+
+
+IAM security tools :
+IAM credentials report (account lvl)
+IAM Access advisor (user lvl)
+
+
+
+on bottom left :
+select credentials report
+download report
+ 
+then 
+click users
+last tab
+Access advisor
+it show what we used
+
+
+Best practices:
+dont use root
+create user 
+create group 
+strong pass 
+mfa 
+create roles 
+use access with cli 
+take 5 green tick on dashboard
+
+
+
+Shared Responsibility Model For IAM :::: it is question of exam 
+aws  : infra , config , compliance validation
+you : users groups roles policy , mfa , rotate keys , analyze 
+
+
+IAM DONE !!!!
+
+---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
