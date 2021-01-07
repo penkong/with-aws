@@ -365,10 +365,158 @@ port 21 = ftp
 
 
 
+security group :
+on left 
+network and security 
+click
+security groups
+show inteface 
+
+on bottom right click 
+see details
+inbound rules 
+outbound rules
+
+
+
+can attach current security group 
+to new instance of ec2
+
+
+
+SSH :
+by command line 
+by ec2 instance connect => in only work with amazon lx 2
+
+to connect 
+in instance console 
+find out ipv4
+ssh ec2-user@ip  (if use amazon linux machine)
+use that pem key file as public key to connect
+ssh -i <name of key with .pem> ec2-user@ip 
+chmod 0400 <name of key> ==> to make it immutable
+now again run that.
+you are in 
+
+
+
+with ec2 connect 
+beside launch instance
+click
+connect 
+click go .
+
+
+now connect 
+aws --version
+aws iam list-users
+aws configure 
+enter things 
+baddddddddddddddddddddddddddddddddddddddddddddd
+
+we want leverage roles of iam 
+on instance 
+right click 
+instance settings 
+attach / replace iam role 
 
 
 
 
+
+there is type of launching a ec2 instance 
+pdf
+
+
+-----------------------------------------------------------------------
+
+EC2 Instance Storage :
+
+EBS : elastic block store 
+ebs volume 
+data stay 
+after termination of ec2
+ec2 - ebs , one to one relationship
+it is like usb
+it use network to 
+communicate to ec2
+
+
+
+
+hand on :
+ec2 instance console 
+on description 
+go down
+root device and block device show it.
+or 
+on left 
+go down
+elstic blocks store 
+volumes
+for create new one 
+create button 
+
+then 
+click right 
+and you can attach 
+
+
+
+snapshot :
+backup 
+by snapshot you can move 
+ebs to another zone 
+
+
+
+AMI : 
+amazon machine image 
+what is that power instances
+we can build our ami 
+it is business.
+
+
+make your instance 
+after 
+right click 
+image 
+create image 
+it create ami for us .
+
+
+on left :
+images 
+AMIs
+on creation of new instance
+you can consume it .
+
+it is good because you will do nginx stuff one time .
+
+
+
+EBS (network) are not best 
+we use 
+EC2 instance store (hardware attached) 
+can have lose storage .
+for temporary data 
+
+
+
+3th type storege
+
+EFS : elastic file system.
+it is nfs 
+managed network file system
+more expensive . can attach to 100 ec2
+
+
+
+========================================================================
+
+ELB and ASG 
+
+elastic load balancing , auto scaling group
 
 
 
