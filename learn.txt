@@ -519,6 +519,305 @@ ELB and ASG
 elastic load balancing , auto scaling group
 
 
+horizantal scalability : elasticity
 
+vartical : junior become senior (scale up)
+horizantal : junior become many junior (auto scale , load balancing)
+
+ 
+high availablitiy : at least 2 zones.
+
+
+agility : make resources available for your developers as as possible
+
+
+
+
+ELB :
+servers 
+forward traffic
+only one dns
+it is managed elb
+ 
+3 kind of lb :
+layer 7 , app lb , https http
+layer 4 , network lb , ultra high performance ,
+layer 7,4 , old school.
+
+
+ELB : ALB or NLB or old LB
+
+
+
+
+pracitce :
+create 2 ec2 instance
+create one 
+click right on created 
+make new similar from it .
+now both are accessbile 
+but we need make it user friendly 
+
+create lb
+on left 
+Load balancing click 
+load balancers
+there are 3 types there
+application layer 7
+fill name 
+it is internet facing 
+define listeners
+availablitiy zone 
+tick servers 
+config security
+create new security group
+load-balancer-4324
+make port
+
+config routing
+for forward traffic need
+define target group (receiver servers)
+new target group 
+name it
+target type instance
+
+next 
+
+now add 2 instances 
+select
+add to registered
+
+next 
+
+creation complete
+can access web 
+from DNS name in description
+
+
+
+
+ASG:
+pdf 
+define min and max
+min , max , actual size
+
+
+
+(disable last ec2 instances)
+pracitce:
+on left 
+AUTO scaling
+click 
+auto scaling group 
+click
+on his console
+create auth scaling group button
+name it 
+
+now need launch template
+click to create 
+name it 
+scroll down 
+choose AMI
+choose instance type
+choose key pair
+choose security group
+on addvanced details 
+User Data
+past scripts
+template created 
+
+now select template
+
+next 
+
+adhere to launch template
+on network 
+subnet
+select 3 of them to make it high availablitiy
+
+next 
+
+load balancing
+click enable 
+choose target group (lb)(pre generated )
+tick health check
+
+next 
+
+group size
+desired 
+min 
+max
+now scaling policy 
+select target tracking policies - select none
+
+next
+next 
+next
+
+check things on console
+
+
+clean up things 
+
+
+===================================================================
+
+S3:
+storage 
+
+backup , recovery , archive , intergration and backbone of website 
+app hosting , media hosting . 
+
+files == objects
+objects store in buckets (directories)
+must be unique name globally 
+
+objects have key
+key is full path to object 
+
+key is composed of prefix + object name 
+s3://my-bucket/fdsfd/fsdfds/ts.txt
+
+
+
+OBJECTS :
+pdf
+objects values are content of body 
+metadata = list of key value 
+tags (security / lifecylce)
+version id
+
+
+s3 security :
+pdf
+User base 
+resource base : bucket policies , acl , 
+encryption 
+
+
+ec2 instance role ---> let access s3 bucket
+
+advanced : cross account access bucket 
+
+json based pilicies
+
+
+
+
+pracitce :
+s3 console 
+image is there 
+you do same for yourself 
+
+click tab
+permissionss
+block public access 
+edit 
+uncheck(not good )
+save
+
+next 
+
+bucket policy tab 
+click on policy generator 
+select type s3 
+Principal(who) * everyone 
+action (list exist)
+arn(amazon resource name) copy it from bucket 
+at exist tab
+at end of it add /*
+add statement 
+
+generate pilicy
+
+copy / paste 
+save
+
+
+
+
+S3 webiste :
+
+<bucket name>.s3-webiste-<region>.amazonaws.com
+
+ 
+
+hands on :
+
+on overview tab 
+upload html files 
+and related stuff
+properites tab
+choose  static website hosting 
+use this bucket 
+write index document 
+save 
+
+
+versioning :
+must enable it 
+
+
+hands on :
+properites tab 
+versioning
+enable
+
+
+Server access :
+log files to s3 
+
+hands on 
+on console 
+create new bucket 
+naem 
+region 
+create 
+
+now click on your first bucket 
+properites tab 
+server access logg
+enable 
+IMPORTANT : choose correct bucket 
+your bucket currently in 
+
+
+now go to console 
+click on log bucket 
+
+
+
+S3 REPLICATION :
+pdf
+crr(cross region) or srr(same region) 
+copy behind scene async
+
+
+hands on 
+make new bucket 
+you have target bucket 
+enable versioning for both
+on first bucket
+managment
+REPLICATION
+add rule 
+routine stuff.
+
+
+
+s3 classes :
+there are other casses 
+like less use files 
+check pdf
+
+
+
+durability and availablitiy :
+file not delete , 
+
+
+hands on :
 
 
